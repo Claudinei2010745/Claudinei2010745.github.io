@@ -1,67 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Claudinei Moreira</title>
+<meta charset="UTF-8">
+<title>Claudinei Moreira</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            text-align: center;
-            padding: 80px 20px;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+/* MENU */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 40px;
+    z-index: 1000;
+}
 
-        h2 {
-            font-size: 22px;
-            font-weight: normal;
-            color: #555;
-            margin-bottom: 30px;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
-        p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-        .botao {
-            display: inline-block;
-            margin: 10px;
-            padding: 14px 26px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+nav a:hover {
+    color: #00bcd4;
+}
 
-        .botao:hover {
-            background-color: #0056b3;
-        }
-    </style>
+/* BANNER */
+.banner {
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.banner-texto {
+    color: white;
+    max-width: 700px;
+}
+
+.banner-texto h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner-texto p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 60px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Claudinei Moreira</h1>
-    <h2>Desenvolvedor em formação</h2>
+<header>
+    <nav>
+        <a href="#home">Lar</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#educacao">Educação</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
 
+<!-- HOME -->
+<section id="home" class="banner">
+    <div class="banner-texto">
+        <h1>Claudinei Moreira</h1>
+        <p>Desenvolvedor | Analista de Dados | BI</p>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <h2>Sobre</h2>
     <p>
-        Olá! Sou Claudinei, estudante de tecnologia e apaixonado por desenvolvimento.
-        Estou construindo meus primeiros projetos com foco em aprender boas práticas,
-        lógica de programação e desenvolvimento web.
+        Sou profissional em formação na área de tecnologia, com interesse em
+        desenvolvimento e análise de dados. Gosto de transformar dados e ideias
+        em soluções práticas.
     </p>
+</section>
 
-    <a class="botao" href="https://github.com/Claudinei2010745" target="_blank">GitHub</a>
-    <a class="botao" href="#">LinkedIn</a>
-    <a class="botao" href="#">Contato</a>
+<!-- HABILIDADES -->
+<section id="habilidades">
+    <h2>Habilidades</h2>
+    <p>HTML, CSS, Python, SQL, Power BI, Git, GitHub</p>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia">
+    <h2>Experiência</h2>
+    <p>Em construção…</p>
+</section>
+
+<!-- EDUCAÇÃO -->
+<section id="educacao">
+    <h2>Educação</h2>
+    <p>Sua formação aqui</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Email | LinkedIn | GitHub</p>
+</section>
 
 </body>
 </html>
