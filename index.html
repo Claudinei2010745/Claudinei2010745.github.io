@@ -46,27 +46,65 @@ nav a:hover {
 }
 
 /* BANNER */
-.banner-video {
-    position: relative;
+/* HERO TECH */
+.hero {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    position: relative;
     overflow: hidden;
 }
 
-.banner-video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.banner-video::after {
+.hero::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.8);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56,189,248,0.3), transparent 70%);
+    top: -200px;
+    right: -200px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(30px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
 }
 
 .banner-texto {
@@ -160,15 +198,12 @@ li {
 </header>
 
 <!-- HOME -->
-<section id="home" class="banner-video">
+<section id="home" class="hero">
 
-    <video autoplay muted loop playsinline>
-        <source src="video-dados.mp4" type="video/mp4">
-    </video>
-
-    <div class="banner-texto">
+    <div class="hero-content">
         <h1>Claudinei Moreira</h1>
         <p>Analista de Dados | Python • SQL • Power BI</p>
+        <a href="#projetos" class="btn">Ver Projetos</a>
     </div>
 
 </section>
