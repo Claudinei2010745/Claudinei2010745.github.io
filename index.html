@@ -209,7 +209,15 @@ li {
     margin-bottom: 20px;
     transition: 0.3s;
 }
-
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    object-position: 0% 20%;
+}
+    
 .card:hover {
     transform: translateY(-5px);
 }
@@ -320,9 +328,9 @@ sections.forEach(section => {
     </div>
 
     <div class="card">
-        <h3>Tela de Vendas</h3>
+        <h3>Sistema Floricultura</h3>
         <p>
-            Tela de Vendas para Floricultura.
+            Sistema de vendas, estoque e relatórios feito em Python (Tkinter).
         </p>
         <a href="https://github.com/Claudinei2010745/floricultura" target="_blank" class="btn-projeto">
             Ver no GitHub
